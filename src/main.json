@@ -1,0 +1,38 @@
+{
+  "one": {
+    "course_name": "Introduction to Coding",
+    "Curriculum": "Sequence, Fundamentals Coding Block, Loops etc.",
+    "price": "6,000",
+    "prev_price": "8,000",
+    "price_per_class": "800",
+    "classes": "100",
+    "sub_head": "",
+    "certificate": "",
+    "most_popular": false,
+    "best_value": false
+  },
+  "two": {
+    "course_name": "App Developer Certificate",
+    "Curriculum": "Events /UI Conditionals, Complex Loops, Logic Structures",
+    "price": "7,000",
+    "prev_price": "10,000",
+    "price_per_class": "900",
+    "classes": "90",
+    "sub_head": "Introduction to Coding",
+    "certificate": "",
+    "most_popular": true,
+    "best_value": false
+  },
+  "three": {
+    "sub_head": "Introduction to Coding",
+    "course_name": "Advance Coding with Space Tech",
+    "Curriculum": "Extended UI/UX, Rich GUI App, Professional Game Design, Game Lab",
+    "price": "11,000",
+    "prev_price": "15,000",
+    "price_per_class": "1000",
+    "classes": "60",
+    "certificate": "App Developer Certificate",
+    "most_popular": false,
+    "best_value": true
+  }
+}
