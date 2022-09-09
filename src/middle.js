@@ -2,11 +2,33 @@ import data from "./main.json";
 
 function middle() {
   var arr = ["one", "two", "three"];
+  function certificateAdding(val) {
+    if (data[val]["certificate"] !== "") {
+      return (
+        <p className="sub_h">{data[val]["certificate"]}</p>
+      );
+    }
+  }
 
-  console.log(data);
-  arr.map(function (val, key, arr) {
-    console.log(data[val]["course_name"]);
-  });
+  function addSubHeading(val) {
+
+    if (data[val]["sub_head"] !== "") {
+      return <p className="sub_h">{data[val]["sub_head"]}</p>;
+    }
+  }
+  function addMostPopular(val) {
+    if (data[val]["most_popular"] === true) {
+      return <div className="ext">Most Popular</div>;
+    }
+  }
+
+  function addbestValue(val){
+    if (data[val]["best_value"] === true) {
+      return <div className="ext2">Best Value</div>;
+    } else {
+      return false;
+    }
+  }
   return (
     <div className="main_content">
       {arr.map(function (val, key, arr) {
@@ -26,41 +48,16 @@ function middle() {
                   <b>
                     <p id="head_1">Curriculum Includes</p>
                   </b>
-                  {(() => {
-                    if (data[val]["sub_head"] !== "") {
-                      return <p className="sub_h">{data[val]["sub_head"]}</p>;
-                    } else {
-                      return false;
-                    }
-                  })()}
-                  {(() => {
-                    if (data[val]["certificate"] !== "") {
-                      return (
-                        <p className="sub_h">{data[val]["certificate"]}</p>
-                      );
-                    } else {
-                    }
-                  })()}
+                  {addSubHeading(val)}
+                  {certificateAdding(val)}
 
                   <p id="head_2">{data[val]["Curriculum"]}</p>
                   <p className="view_detailed">View Detailed Curriculum</p>
                 </div>
               </div>
               <div className="template_price">
-                {(() => {
-                  if (data[val]["most_popular"] == true) {
-                    return <div className="ext">Most Popular</div>;
-                  } else {
-                    return false;
-                  }
-                })()}{" "}
-                {(() => {
-                  if (data[val]["best_value"] == true) {
-                    return <div className="ext2">Best Value</div>;
-                  } else {
-                    return false;
-                  }
-                })()}
+                {addMostPopular(val)}
+              {addbestValue(val)}
                 <div className="price_div">
                   <div className="price_left">
                     <div>Rs. {data[val]["price"]}</div>
